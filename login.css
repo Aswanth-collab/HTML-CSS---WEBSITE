@@ -1,0 +1,229 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main
+{
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ /* background-color: #eff0f4; */
+ /* background-image: url("https://img.freepik.com/free-photo/top-view-frame-with-food-copy-space_23-2148247893.jpg?w=2000"); */
+ background-color: #96B6C5;
+ background-size: cover;
+ position: relative;
+}
+.water
+{
+    width: 30%;
+    height: 65%;
+    border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+    /* border: 2px solid black; */
+    box-shadow: inset 50px 40px 20px rgba(0,0,0,0.05),
+    25px 35px 20px rgba(0,0,0,0.05),
+    25px 30px 20px rgba(0,0,0,0.05),
+    -50px -40px 25px rgba(255,255,255,0.9) inset;
+    transition: 2s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.water:hover{
+   border-radius: 50%;
+}
+.water::before
+{ 
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50px;
+    left: 100px;
+}
+.water::after
+{ 
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 85px;
+    left: 120px;
+}
+.details{
+    /* border: 1px solid black; */
+    width: 50%;
+    min-height: 60%;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+button,a
+{
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: #D2DE32;
+    border-color: #D2DE32;
+    font-weight: bold;
+    
+}
+input{
+    position: relative;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.05),
+    15px 15px 10px rgba(0,0,0,0.05),
+    15px 10px 15px rgba(0,0,0,0.05),
+    -2px -5px 10px rgba(255,255,255,0.9) inset;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+}
+/* input::before
+{
+    content: "";
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    background-color: black;
+}*/
+a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+aside{
+    visibility: hidden;
+    display: none;
+}
+@media screen and (min-width:501px) and (max-width:768px){
+    .water{
+        width: 60%;
+    }
+    .water::before{
+        left: 80px;
+    }
+    .water::after{
+        left: 100px;
+    }
+}
+@media screen and (min-width:767px) and (max-width:1000px){
+    .water{
+        width: 50%;
+    }
+}
+@media screen and (min-width:1001px) and (max-width:1200px){
+    .water{
+        width: 50%;
+    }
+}
+@media screen and (min-width:300px) and (max-width:500px){
+    .water{
+        width: 90%;
+    }
+    .water::before{
+        left: 50px;
+    }
+    .water::after{
+        left: 70px;
+    }
+}
+    /* .water{
+        visibility: hidden;
+        display: none;
+    }
+    aside{
+        visibility: visible;
+        display: block;
+    }
+    aside{
+        width: 320px;
+        height: 450px;
+        float: left;
+        border: 2px solid black;
+        /* margin-top: 140px; */
+        /* margin-left: 255px; */
+        /* background-color: rgba(0,0,0,0.7);
+        border-radius: 10px;
+    }
+    aside button{
+        width: 250px;
+        height: 50px;
+        margin-left: 35px;
+        background-color: white;
+        color: #FD8D14;
+        font-weight: bold;
+        border-radius: 10px;
+        margin-top: 25px;
+        font-size: 20px;
+    }
+    aside input{
+        width: 250px;
+        background-color: black;
+        color: white;
+        border-right: black;
+        border-color: black black #FD8D14 black ;
+        margin-left: 35px;
+        margin-top: 35px;
+        padding-bottom: 5px;
+    }
+    aside > button:nth-child(4){
+        color: black;
+        background-color: #FD8D14;
+        margin-bottom: 20px;
+    }
+    aside > h3,h4{
+        text-align: center;
+        color: white;
+    }
+    aside > h3 span{
+        color: #F31559;
+    }
+    aside > h4{
+        margin-top: 15px;
+    }
+    aside > i{
+        margin-left: 15px;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    aside > h4 + i{
+        margin-left: 55px;
+    } */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

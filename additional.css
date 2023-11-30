@@ -1,0 +1,299 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navsecond a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 3px 15px;
+    border-radius: 5px;
+    border: 4px solid white;
+    /* transition-duration: 0.5s; */
+}
+.navsecond a:hover{
+    background-color: #96B6C5;
+    border: 4px solid white;
+}
+.main
+{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+nav{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    z-index: 999;
+}
+.navfirst,.navsecond
+{
+    display: flex;
+    font-size: 1.5rem;
+}
+.navsecond{
+    gap: 2.5rem;
+}
+.navfirst{
+    gap: 0.5rem;
+}
+.icons{
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    right: 10px;
+}
+input{
+    display: none;
+}
+nav::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #96B6C5;
+z-index: -1;
+}
+.new{
+    /* border: 2px solid black; */
+    /* height: 100vh; */
+    width: 50%;
+    padding-top: 70px;
+}
+.one{
+    /* border: 2px solid black; */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    width: 50%;
+}
+.two{
+    padding-top: 50px;
+    /* border: 2px solid black; */
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.click{
+    padding: 10px;
+    border: 2px solid #d4d5d9;
+    width: 30%;
+}
+.side,.side3{
+    display: flex;
+    gap:5px;
+}
+.side2{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.three,.four{
+    /* border: 2px solid black; */
+}
+.four{
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.four img{
+    width: 130px;
+    height: 130px;
+}
+.support{
+    display: flex;
+}
+.support button{
+    position: absolute;
+    bottom: -3px;
+    left: 25px;
+    padding: 10px 25px;
+    background-color: white;
+    color: green;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.free{
+    position: relative;
+}
+.support button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.new > hr{
+    height: 10px;
+    background-color: #d4d5d9;
+    margin-top: 40px;
+}
+.main > label a{
+    border: 2px solid #96B6C5;
+    padding: 8px 25px;
+    font-size: 20px;
+    background-color: #96B6C5;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    right: 45%;
+}
+.popup,.jumping{
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    position: fixed;
+    right: -100%;
+}
+.jumping{
+    font-size: 17px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.jumping > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.jumping img{
+    width: 100%;
+    height: 300px;
+}
+.main >input:checked ~ .popup{
+    right: 35%;
+    top:60%;
+    z-index: 5;
+}
+.support > input:checked ~ .jumping{
+    right: 35%;
+    top:15%;
+    z-index: 5;
+}
+.popup > div{
+display: flex;
+justify-content: space-between;
+gap: 15px;
+}
+.support > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.support i{
+    border: 2px solid #00ff1e;
+    padding: 5px;
+}
+.popup a{
+    text-decoration: none;
+    color: black;
+}
+.navfirst img{
+    width: 50px;
+    height: 50px;
+}
+@media screen and (min-width:300px) and (max-width:768px) {
+    section{
+        width: 90%;
+    }
+    .icons{
+        display: inline-flex;
+    }
+    .icons i:nth-child(2)
+    {
+        display: none;
+    }
+    .navsecond
+    {
+     position: absolute;
+     width: 100%;
+     background-image:linear-gradient(to right,#dae2f8,#d6a4a4);
+     top: 100%;
+     left: 0;
+     flex-direction: column;
+     gap: 1rem;
+     align-items: center;
+     justify-content: center;
+     height: 0;
+     overflow: hidden;
+     transition: .3s ease;
+    }
+    #check:checked~.icons .super{
+      display: none;
+    }
+    #check:checked~.icons i:nth-child(2){
+        display: block;
+        padding-left: 10px;
+      }
+    #check:checked~.navsecond{
+        height: 16.7rem;
+    }
+    .navsecond a {
+        display: block;
+    }
+}
+@media screen and (min-width:501px) and (max-width:768px){
+    .new,.one{
+        width: 70%;
+    }
+    .support{
+        gap: 20px;
+    }
+    .main > label a{
+        right: 40%;
+    }
+    .main >input:checked ~ .popup{
+        right: 18%;
+        top:50%;
+    }
+    .support > input:checked ~ .jumping{
+        right: 34%;
+        top:15%
+    }
+    .jumping{
+        width: 400px;
+    }
+    .jumping img{
+        height: 200px;
+    }
+}
+@media screen and (min-width:300px) and (max-width:500px) {
+    .popup{
+        right: -200%;
+    }
+    .new,.one{
+        width: 90%;
+    }
+    .click,.side3{
+     display: flex;
+     flex-direction: column;
+    }
+    .main > label a{
+        right: 20%;
+    }
+    .main >input:checked ~ .popup{
+        top: 45%;
+        right: 5%;
+    }
+    .popup{
+        width: 90%;
+    }
+    .support > input:checked ~ .jumping{
+        visibility: hidden;
+    }
+}

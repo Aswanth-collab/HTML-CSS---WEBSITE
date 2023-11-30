@@ -1,0 +1,130 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navsecond a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 3px 15px;
+    border-radius: 5px;
+    border: 4px solid white;
+    /* transition-duration: 0.5s; */
+}
+.navsecond a:hover{
+    background-color: #96B6C5;
+    border: 4px solid white;
+}
+.main
+{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.navfirst img{
+    width: 50px;
+    height: 50px;
+}
+nav{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    z-index: 999;
+}
+.navfirst,.navsecond
+{
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+}
+.navsecond{
+    gap: 2.5rem;
+}
+.navfirst{
+    gap: 0.5rem;
+}
+.icons{
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    right: 10px;
+}
+nav > input{
+    display: none;
+}
+.search{
+    padding-top: 150px;
+    width: 70%;
+}
+.search input{
+    width: 100%;
+    padding: 15px 5px;
+}
+nav::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #96B6C5;
+z-index: -1;
+}
+.search > h1{
+    padding: 20px 0px;
+}
+.search img{
+width: 15%;
+}
+@media screen and (min-width:300px) and (max-width:768px) {
+    section{
+        width: 90%;
+    }
+    .icons{
+        display: inline-flex;
+    }
+    .icons i:nth-child(2)
+    {
+        display: none;
+    }
+    .navsecond
+    {
+     position: absolute;
+     width: 100%;
+     background-image:linear-gradient(to right,#dae2f8,#d6a4a4);
+     top: 100%;
+     left: 0;
+     flex-direction: column;
+     gap: 1rem;
+     align-items: center;
+     justify-content: center;
+     height: 0;
+     overflow: hidden;
+     transition: .3s ease;
+    }
+    #check:checked~.icons .super{
+      display: none;
+    }
+    #check:checked~.icons i:nth-child(2){
+        display: block;
+        padding-left: 10px;
+      }
+    #check:checked~.navsecond{
+        height: 16.7rem;
+    }
+    .navsecond a {
+        display: block;
+    }
+    .search img{
+        width: 45%;
+    }
+
+}
